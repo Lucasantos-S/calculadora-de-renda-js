@@ -4,7 +4,8 @@
  let res = document.getElementById('res')
  let des = []
  let rend = []
-let botaocalcular = document.getElementById('botaodecalcular')
+ let botaocalcular = document.getElementById('botaodecalcular')
+ let erro = document.getElementById('erro')
 
 
 ///função para pegar os array
@@ -21,7 +22,6 @@ let botaocalcular = document.getElementById('botaodecalcular')
  
 ///incluido o array de renda na tela
 function adicionarRenda () {
-   
     if(isNumber(renda.value)) {
     rend.push(Number(renda.value))
     des.push(Number(despesa.value))
@@ -31,25 +31,27 @@ function adicionarRenda () {
     rlista.appendChild(item)
      
    
-    res.innerHTML = ''
+    
     res.style.display='none'
     }
-    
+    erro.style.display = 'none' //Retirar o alerta de erro ao adicionar
     renda.value = ''
 }
 
 ///incluido o array de despesas na tela
 function adicionarDespesas() {
-    if(isNumber(despesa.value)) {
+        if(isNumber(despesa.value)) {
         des.push(Number(despesa.value))
          let item = document.createElement('option')
          item.style.background = 'red'
          item.text = `- Valor de - R$:${despesa.value} retirado em despesas`
          rlista.appendChild(item)
          
-         res.innerHTML = ''
+         
          res.style.display='none'
         }
+
+        erro.style.display = 'none' //Retirar o alerta de erro ao adicionar
     
         
         despesa.value = ''
@@ -80,13 +82,13 @@ function adicionarDespesas() {
 function calcular(){ 
 
 
-    res.style.display='block'
+   
     let total = soma(rend) - soma(des)
     
     if( Number(rend) == 0 || Number(des) == 0 ) {
-        res.innerHTML = 'ERRO'
-        res.style.display='block'
+        erro.style.display = 'block'
     } else if(total >0) {
+        res.style.display='block'
         form.style.display = 'none'
         botaodecalcular.style.display = 'none'
         document.body.style.background= '#0000FF'
@@ -95,6 +97,7 @@ function calcular(){
         res.innerHTML+= ` <p> O final e de: R$${total.toFixed(2)}</p>`
        
     } else {
+        res.style.display='block'
         form.style.display = 'none'
         botaodecalcular.style.display = 'none'
         document.body.style.background= '#FF0000'
