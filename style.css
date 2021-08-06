@@ -1,0 +1,256 @@
+*{
+    padding: 0;
+    border: 0;
+    margin: 0;
+}
+html {
+    height: 100%;
+    min-height: 100%;
+}
+
+:root {
+    --fonte-title: 'Permanent Marker', cursive;
+    --font-text: 'Itim', cursive;
+    --font-cacular: 'Orbitron', sans-serif
+}   
+
+body{
+    background-color: rgba(119, 17, 17, 0.671);
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+header{
+    text-align: center;
+    margin-top: 10rem;
+    font: 25px var(--fonte-title);
+    color: wheat;
+    text-shadow: black 0.1em 0.1em 0.2em ;
+
+}
+.titulo h1{
+    padding: 30px;
+    
+    
+}
+#linha{
+    margin: 10px auto 0px auto;
+    width:500px;  
+    height: 1px;
+    background: black;
+    box-shadow: 10px 10px 10px 10px;
+  }
+
+#erro {
+    background: red;
+    width: 400px;
+    height: 40px;
+    text-align: center;
+    margin: 10px auto -50px auto;
+    box-shadow: 0px 0px 0px 2px white;
+    border-radius: 2px;
+    z-index: 1000;
+    display: block;
+    animation: mymove 1s  forwards;
+    position: relative;
+  }
+  
+  #erro p {
+    margin-top: -20px;
+    color: white;
+    font-family: var(--font-text);
+    
+  }
+
+  @keyframes mymove {
+    from {top: 0px;}
+    50% {top: 50px !important;} /* ignored */
+    100% {top: 30px ; }
+  }
+
+
+section {
+    width: 500px;
+    height: auto;
+    background: rgb(0, 0, 0);
+
+    margin: 40px auto 0px auto;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: 1px 5px 5px 1px  black;
+    animation: retorno 1s;
+   color: white;
+   font-family:var(--fonte-title);
+   display: block;
+    
+    
+
+}
+@keyframes retorno {
+
+    0%{
+        transform: scale(0.1);
+        opacity: 0;
+    }
+
+    60%{
+        transform: scale(1.2) ;
+        opacity: 1;
+    }
+
+    100%{
+        transform:  scale(1);
+    }
+
+}
+
+footer{
+    text-align: center;
+    background: black;
+    height: 50px;
+    margin-top: auto;
+    width: auto;
+    
+    color: white;
+}
+
+#campo{
+    margin: 20px 10px 5px 10px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(0, 0, 0, 0.158);
+    padding: 20px;
+    border-radius: 20px;
+    padding: 20px;
+
+}
+#campo #rend, #desp{
+    border: 1px solid hsla(0, 0%, 0%, 0.37);
+    width: 50%;
+    height: 20px;
+    border-radius: 5px;
+    
+}
+#campo1, #campo2{
+    display: block;
+    flex-direction: column;
+  padding: 5px;
+    border-radius: 20px;
+}
+.botao {
+    width: 20%;
+    height: 25px;
+    border-radius: 5px;
+    background: green;
+    
+}
+
+.botao:hover{
+    background: rgb(56, 202, 56);
+}
+select {
+    width: 400px;
+    color: black;
+    border-radius: 4px;
+    text-align: center;
+    font-family: var(--font-text);
+    font-size: 16px;
+}
+#select {
+  margin-left: 50px;
+  
+  width: 200px;
+    
+}
+
+#limpar {
+    width: 100px;
+    height: 25px;
+    margin-left: 75%;
+    margin-top: 10px;
+    box-shadow: 1px 1px 1px 1px black;
+    border-radius: 2px;
+    background: rgba(248, 247, 247, 0.671);
+    font-family: var(--font-text);
+    font-size:  16px ;
+    margin-bottom: 10px;
+    
+    
+}
+#limpar:hover {
+    background: rgba(255, 228, 196, 0.726);
+}
+
+#calcular {
+    margin: 0px auto 0px auto;
+    
+}
+#calcular input {
+    font: 20px solid;
+    font-family:   var(--font-cacular);;
+    letter-spacing: .2rem;
+    color: white;
+
+    text-align: center;
+    width: 150px;
+    height: 50px;
+
+    box-shadow: 1px 1px 3px 5px black;
+    border-radius: 10px;
+    background: rgba(255, 0, 221, 0.26);
+}
+#calcular input:hover{
+    background-color: rgba(0, 0, 0, 0.377);
+}
+#res{
+    display: none;
+    text-align: center;
+    width: 300px;
+    margin: 20px auto 0px auto;
+    height: 100px;
+    background:wheat;
+    color:black;
+    font:30px var(--font-text);
+    text-shadow:rgba(0, 0, 0, 0.459) 0.1em 0.1em 0.2em ;
+    padding: 30px;
+    
+    border-radius: 40px;
+    box-shadow: 0px 2px 5px 1px black;
+    animation: transf 1s;
+    
+    
+    
+    
+}
+
+@keyframes transf {
+
+    0%{
+        transform: scale(0.1);
+        opacity: 0;
+    }
+
+    60%{
+        transform: scale(1.2) ;
+        opacity: 1;
+    }
+
+    100%{
+        transform:  scale(1);
+    }
+
+}
+
+#retorno{
+    display: none;
+    width: 20%;
+    height: 40px;
+    border-radius: 5px;
+    background:rgba(238, 255, 0, 0.993);
+    margin: 50px auto 0px auto;
+    font: 30px bolder ;
+}
+
+#retorno:hover{
+    background: rgba(253, 253, 253, 0.514);
+}

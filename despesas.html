@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+        
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+    </style>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+    </style>
+
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Caculadora</title>
+    
+</head>
+<body>
+    <header>
+        <h1 class="titulo">Calculadora de despesas</h1>
+        <div id="linha"></div>
+        
+    </header>
+    <div id="erro">
+        <p> <br>[ERRO]</br> Favor digitar os valore nos campos abaixo</p>
+    </div>
+   
+        <section id="form">
+           
+            <div id="campo">
+                <div id="campo1">
+                    Renda: <input type="number" name="rend" id="rend">
+                    <input class="botao" type="button" value="Adicionar" onclick="adicionarRenda()">
+                
+                </div >
+                <div id="campo2">
+                    Despesas: <input type="number" name="desp" id="desp">
+                    <input class="botao" type="button" value="Adicionar" onclick="adicionarDespesas()">
+                </div>
+            </div>
+            <div id="select">
+                <select name="rlist" id="rlis" size="8"></select>
+                <br>
+                 <input type="button" value="Limpar" onclick="limparcampo()" id="limpar">
+                
+            </div>
+        </section>
+
+        <div id="calcular">
+            <br><input type="button" value="Calcular" onclick="calcular()" id="botaodecalcular">
+        </div>
+
+        <div id="res">
+            <p id="res1"></p>
+        </div>
+        <div id="return">
+            <input type="button" value="voltar" onclick="voltar()" id="retorno">
+        </div>
+        
+   
+        
+
+
+
+
+    <footer>
+        <p>Lucas</p>
+    </footer>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
