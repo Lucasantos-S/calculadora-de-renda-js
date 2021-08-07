@@ -130,28 +130,3 @@ retorno.setAttribute ('value', `\u{2B05}` )
 
 
 
-/*let total = soma(rend) - soma(des)
-    let result = document.createElement('p')
-    res.style.display = 'block'
-    res.style.transition = '2s'
-   
-
-    if(total >= 1 ) {
-        
-        res.innerText = `Salario positivo`
-    
-    } else {
-        res.innerHTML = 'Salario negativo'
-    }
-     
-    res.innerHTML= `O Salario total e de: R$${total.toFixed(2)}`
-    res.appendChild(result)
-
-    calcular = '' */
-
-
-    /*else {
-        form.style.display = 'none'
-        returno.style.display = 'block'
-        res.innerHTML= ` <p> O ${rend} Salario total e de: R$${total.toFixed(2)}</p>`
-       */
