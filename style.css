@@ -15,7 +15,7 @@ html {
 }   
 
 body{
-    background-color: rgba(119, 17, 17, 0.671);
+    background-color: #771111ab;
     height: 100px;
     display: flex;
     flex-direction: column;

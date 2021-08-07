@@ -118,6 +118,7 @@ function voltar() {
     retorno.style.display = 'none'
     res.innerHTML = ''
     botaodecalcular.style.display = 'block'
+    document.body.style.background= '#771111ab'
 }
 
 retorno.setAttribute ('value', `\u{2B05}` )
