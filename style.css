@@ -8,6 +8,7 @@ html {
     min-height: 100%;
 }
 
+
 :root {
     --fonte-title: 'Permanent Marker', cursive;
     --font-text: 'Itim', cursive;
@@ -15,11 +16,13 @@ html {
 }   
 
 body{
-    background-color: #771111ab;
-    height: 100px;
+    background-color: #110808bd;
+    
     display: flex;
     flex-direction: column;
     min-height: 100%;
+    overflow-y: hidden;
+    
 }
 header{
     text-align: center;
@@ -106,11 +109,15 @@ section {
 footer{
     text-align: center;
     background: black;
-    height: 50px;
-    margin-top: 20px;
+    height: 100px;
+    margin-top: 180px;
+    
     width: auto;
     
     color: white;
+}
+footer p {
+    margin-top: 25px;
 }
 
 #campo{
